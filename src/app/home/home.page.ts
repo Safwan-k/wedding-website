@@ -35,7 +35,7 @@ export class HomePage implements OnInit {
   }
 
  async ngOnInit() {
-    await this.showLoading()
+    // await this.showLoading()
     this.content = this.elementRef.nativeElement
     this.domCtrl.read(() => {
       console.log('here')
@@ -65,15 +65,15 @@ export class HomePage implements OnInit {
 
   }
 
-  async showLoading() {
-    const loading = await this.loadingCtrl.create({
-      message: 'Loading Please wait',
-      mode: 'ios',
-      duration: 5000,
-    });
-
-    await loading.present();
-  }
+  // async showLoading() {
+  //   const loading = await this.loadingCtrl.create({
+  //     message: 'Loading Please wait',
+  //     mode: 'ios',
+  //     duration: 5000,
+  //   });
+  //
+  //   await loading.present();
+  // }
 
   webView(){
     console.log('here calling')
