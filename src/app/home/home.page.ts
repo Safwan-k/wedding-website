@@ -1,5 +1,5 @@
-import {AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from '@angular/core';
-import {DomController, IonContent, LoadingController, Platform} from "@ionic/angular";
+import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {DomController, IonContent, Platform} from "@ionic/angular";
 import "@lottiefiles/lottie-player";
 
 
@@ -27,15 +27,14 @@ export class HomePage implements OnInit {
 
 
 
-  constructor(public renderer: Renderer2, public elementRef: ElementRef, public domCtrl: DomController, public platform: Platform,  public loadingCtrl: LoadingController) {
+  constructor(public renderer: Renderer2, public elementRef: ElementRef, public domCtrl: DomController, public platform: Platform) {
     this.platform.ready().then((value)=>{
       this.height = this.platform.height()
       console.log(this.height)
     })
   }
 
- async ngOnInit() {
-    // await this.showLoading()
+  ngOnInit() {
     this.content = this.elementRef.nativeElement
     this.domCtrl.read(() => {
       console.log('here')
@@ -64,16 +63,6 @@ export class HomePage implements OnInit {
     }
 
   }
-
-  // async showLoading() {
-  //   const loading = await this.loadingCtrl.create({
-  //     message: 'Loading Please wait',
-  //     mode: 'ios',
-  //     duration: 5000,
-  //   });
-  //
-  //   await loading.present();
-  // }
 
   webView(){
     console.log('here calling')
