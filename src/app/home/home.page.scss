@@ -1,27 +1,19 @@
-#container {
-  text-align: center;
+ion-content{
+  //--background: maroon;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
+
+.parallax img{
   position: absolute;
+  top: 0px;
   left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  pointer-events: none;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+
+.margin {
+  margin-top: 200px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}

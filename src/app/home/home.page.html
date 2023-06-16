@@ -1,20 +1,26 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content  [scrollEvents]="true">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div style="color: grey; background: #2dd36f;">
+    <div >
+      <ion-row>
+        <section class="parallax">
+          <img src="assets/bg.png" alt="" style=" width: 100% " #bg>
+          <img src="assets/hill.png" style="position: absolute; " alt="" #hill>
+          <img src="assets/bride.png" style="position: absolute; left: 57px; " alt="" #bride>
+          <img src="assets/groom.png" style="position: absolute; left: -57px; " alt="" #groom>
+          <img src="assets/leafunder.png" style="position: absolute;" alt="" #leafunder>
+          <img src="assets/flowerunder.png" style="position: absolute;" alt="" #flowerunder>
+          <img src="assets/border.png"  alt="" >
+          <img src="assets/date.webp"  alt="" >
+        </section>
+        <img src="assets/btnlocation.png" (click)="webView()" alt="">
+
+      </ion-row>
+    </div>
   </div>
+
+
 </ion-content>
